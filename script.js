@@ -1,31 +1,33 @@
 const paraA = document.getElementById("paraA");
 const paraB = document.getElementById("paraB");
 const paraC = document.getElementById("paraC");
+const paraD = document.getElementById("paraD");
 
 
+paraA.addEventListener("click", AcceptClick);
 
-paraA.addEventListener("click", RespondClick);
+paraB.addEventListener("mousemove", AcceptMousemove);
 
-paraB.addEventListener("mousemove", RespondMousemove);
+paraC.addEventListener("mousedown", AcceptMousedown);
 
-paraC.addEventListener("mousedown", RespondMousedown);
-
-paraD.addEventListener("mouseover", RespondMouseover);
+paraD.addEventListener("mouseover", AcceptMouseover);
 
 
-function RespondClick() {
-  document.getElementById("paraA").innerHTML = ("this, 'Ooops!'");
+function AcceptClick() {
+  document.getElementById("paraA").innerHTML = ("this", 'Ooops!');
 }
 
-function RespondMousemove() {
-  document.getElementById("paraB").innerHTML = ("this, 'Thank You'");
+function AcceptMousemove() {
+  document.getElementById("paraB").innerHTML = ("this", 'Thank You');
 }
 
-function RespondMousedown() {
-  document.getElementById("paraC").innerHTML = ("this, 'Release Me'");
+function AcceptMousedown() {
+  document.getElementById("paraC").innerHTML = ("this", 'Release Me');
 }
 
-function RespondMouseover() {
-  document.getElementById("paraD").innerHTML = ("this, 'Take the Mouse Out'");
+function AcceptMouseover() {
+  document.getElementById("paraD").innerHTML = ("this", 'Take the Mouse Out');
 }
+
+
 
